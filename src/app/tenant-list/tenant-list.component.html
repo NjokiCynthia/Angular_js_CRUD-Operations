@@ -1,0 +1,43 @@
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h2 class="bg-primary text-align center">A list of the Tenants</h2>
+  </div>
+  <div class="panel-body">
+    <a href="#" routerLink="/add/" class="btn btn-success text-align center">Create A New Tenant</a>
+    <table class="table table-striped" style="background-color:rgba(0, 0, 0, 0);">
+      <thead class="table-dark">
+        <tr class="bg-primary">
+          <th scope="col">#</th>  
+          <th scope="col">tenant_fname</th>
+            <th scope="col">tenant_lname</th>
+            <th scope="col">Gender</th>
+            <th scope="col">Email</th>
+            <th scope="col">Address</th>
+            <th scope="col">ID_no</th>
+            <th scope="col">Property</th>  
+            <th scope="col">County</th>     
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let tenant of tenants ">
+          <td>{{tenant.tenant_id}}</td>
+          <td>{{tenant.tenant_fname}}</td>
+          <td>{{tenant.tenant_lname}}</td>
+          <td>{{tenant.gender}}</td>
+          <td>{{tenant.email}}</td>
+          <td>{{tenant.address}}</td>
+          <td>{{tenant.id_no}}</td>
+        <td>{{tenant.property_name}}</td>
+        <td>{{tenant.county}}</td>
+         
+          <td>
+          <!-- <button type="button" (click)="deleteTenant(tenant.tenant_id)" class="btn btn-danger">Delete</button> -->
+        
+        <button (click)="tenantDetails(tenant.tenant_id)" class="btn btn-info" style="margin-left: 10px">Details</button> </td>
+        <button type=button class="btn btn-primary"  (click)="deleteTenant(tenant.tenant_id)" class = "btn btn-danger">Delete</button>
+  
+        </tr>   
+      </tbody>
+    </table>
+  </div>
+</div>

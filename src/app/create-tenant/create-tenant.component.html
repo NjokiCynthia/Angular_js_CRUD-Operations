@@ -1,0 +1,69 @@
+<h3>Create Tenants</h3>
+<div [hidden]="submitted" style="width: 400px;">
+  <form (ngSubmit)="onSubmit()">
+    <div class ="form-group">
+      <label for="name">First Name</label>
+      <input type="text" class="form-control" id="firstName" required [(ngModel)]="tenants.tenant_fname" name="tenant_fname">
+    </div>
+
+    <div class="form-group">
+      <label for="name">Last Name</label>
+      <input type="text" class="form-control" id="lastName" required [(ngModel)]="tenants.tenant_lname" name="tenant_lname">
+    </div>
+    <div class="form-group">
+        <label for="name">Tenant Email</label>
+        <input type="text" class="form-control" id="tenant_email" required [(ngModel)]="tenants.email" name="tenant_desc">
+      </div>
+      <div class="form-group">
+        <label for="name">Tenant Gender</label> <select [(ngModel)]="tenants.gender" name="tenant_gender"
+        ng-required="item.id==8 && item.quantity > 0" class="ng-pristine ng-valid ng-valid-required">
+            <option value="?" selected="selected"></option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+           
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="name">Tenant Address</label>
+        <input type="text" class="form-control" id="tenant_address" required [(ngModel)]="tenants.address" name="tenant_adress">
+      </div>
+
+      
+      <div class="form-group">
+        <label for="name">Tenant ID Number</label>
+        <input type="text" class="form-control" id="tenant_id_no" required [(ngModel)]="tenants.id_no" name="tenant_id_no">
+      </div>
+      <div class="form-group">
+        <label for="name">Tenant Town</label>
+        <select [(ngModel)]="tenants.property_name" name="tenant_property"
+        ng-required="item.id==8 && item.quantity > 0" class="ng-pristine ng-valid ng-valid-required">
+            <option value="?" selected="selected"></option>
+            <option value="Mansion">Mansion</option>
+            <option value="Bedsitter">Bedsitter</option>
+            <option value="Single room">Single Room</option>
+            <option value="Apartment">Apartment</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="name">Tenant County</label>
+        <select [(ngModel)]="tenants.county" name="tenant_county"
+        ng-required="item.id==8 && item.quantity > 0" class="ng-pristine ng-valid ng-valid-required">
+            <option value="?" selected="selected"></option>
+            <option value="Laikipia">Laikipia</option>
+            <option value="Nakuru">Nakuru</option>
+            <option value="Mombasa">Mombasa</option>
+            <option value="Lamu">Lamu</option>
+        </select>
+        <!-- <input type="text" class="form-control" id="tenant_desc" required [(ngModel)]="tenants.county_id" name="tenant_county"> -->
+      </div>
+        
+    <input type="hidden" ng-model="tenants.tenant_id" />
+
+    <button type="submit"  ng-click="saveRecord()" class="btn btn-success">Submit</button>
+  </form>
+</div>
+
+<div [hidden]="!submitted">
+  <h4>You submitted successfully!</h4>
+   <button class="btn btn-success" (click)="newTenant()">Add Another Tenant.</button> 
+</div>
