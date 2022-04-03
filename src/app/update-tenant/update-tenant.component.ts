@@ -24,17 +24,20 @@ export class UpdateTenantComponent implements OnInit {
     this.tenantServiceService.getTenant(this.tenant_id)
     .subscribe(data => {
      console.log(this.tenant_id)
-     this.tenant_id = data;
+     //this.tenant_id = data;
+     this.tenants = data;
       }, error => console.log(error));
   }
 
   updateTenant() {
+    
     this.tenantServiceService.updateTenant(this.tenant_id)
       .subscribe(data => {
-        console.log(data);
+        console.log(this.tenant_id);
+        //console.log(data);
        // this.tenants = new Tenants();
       //    this.tenantServiceService.getTenantList().subscribe((data: Tenants[])=>{
-      // this.tenants = data;
+       this.tenants = data;
       // console.log(this.tenants);
         this.gotoList();
       }, error => console.log(error));
@@ -47,3 +50,4 @@ export class UpdateTenantComponent implements OnInit {
     this.router.navigate(['/tenants']);
   }
 }
+

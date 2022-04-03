@@ -1,7 +1,7 @@
 <h3>Modify the Tenant</h3>
 <div [hidden]="onSubmit" style="width: 400px;">
-  <form (ngSubmit)="onSubmit()">  </form>
-</div> 
+  <form #updateForm (ngSubmit)="onSubmit()">  
+
     <div class="form-group">
       <label for="name">First Name</label>
       <input type="text" class="form-control" id="firstName" required [(ngModel)]="tenants.tenant_fname" name="firstName">
@@ -41,3 +41,4 @@
       </div>
 
     <button type="submit" class="btn btn-success">Submit</button>
+  </form>

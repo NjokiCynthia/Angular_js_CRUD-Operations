@@ -10,8 +10,9 @@ const routes: Routes = [
   { path: '', redirectTo: 'tenants', pathMatch: 'full' },
   { path: 'tenants', component: TenantListComponent },
   { path: 'add', component: CreateTenantComponent },
-  { path: 'update', component: UpdateTenantComponent },
+  { path: 'update/:tenant_id', component: UpdateTenantComponent },
   { path: 'details/:tenant_id', component: TenantDetailsComponent },
+ 
 ];
 
 @NgModule({

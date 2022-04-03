@@ -38,6 +38,7 @@ export class TenantDetailsComponent implements OnInit {
   // }
   updateTenant(tenant_id: BigInt){
     console.log(tenant_id);
-    this.router.navigate(['update']);
+    // this.router.navigate(['update']);
+    this.router.navigate(['update', tenant_id]);
   }
 }

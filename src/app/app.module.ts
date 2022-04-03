@@ -14,15 +14,14 @@ import { UpdateTenantComponent } from './update-tenant/update-tenant.component';
 import { TenantDetailsComponent } from './tenant-details/tenant-details.component';
 
 @NgModule({
+  exports: [RouterModule],
   declarations: [
     AppComponent,
     TenantListComponent,
     CreateTenantComponent,
     UpdateTenantComponent,
-    TenantDetailsComponent,
-   
+    TenantDetailsComponent, 
   ],
-
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -31,9 +30,7 @@ import { TenantDetailsComponent } from './tenant-details/tenant-details.componen
     HttpClientModule,
     RouterModule,
     NgbModule,
-    FormsModule
-    
-     
+    FormsModule 
   ],
 
   providers: [TenantServiceService],
