@@ -23,7 +23,7 @@ export class TenantListComponent implements OnInit {
   //   this.reloadData();
   // }
   ngOnInit(): void {
-    document.body.className = "selector";
+   // document.body.className = "selector";
     this.tenantServiceService.getTenantList().subscribe((data: Tenants[])=>{
       this.tenants = data;
       console.log(this.tenants);
@@ -31,7 +31,7 @@ export class TenantListComponent implements OnInit {
   }
   
   deleteTenant(tenant_id: BigInt){
-      if(confirm("Are you sure to delete " + tenant_id)) {
+      if(confirm("Are you sure to delete this tenant" )) {
         console.log(
          // this.tenantServiceService.deleteTenant(tenant_id).subscribe(res => {
             this.tenants = this.tenants.filter(item => item.tenant_id !== tenant_id));
@@ -47,13 +47,4 @@ export class TenantListComponent implements OnInit {
  
 }
   
- // reloadData() {
-  //  this.tenantServiceService.getTenantList().subscribe(
-  //     data => {             
-  //       this.tenants=data;
-  //       console.log(this.tenants)
-  //     }, 
-  //     error=>{
-  //     }
-  //   )
-  // }
+

@@ -31,13 +31,13 @@ export class UpdateTenantComponent implements OnInit {
 
   updateTenant() {
     
-    this.tenantServiceService.updateTenant(this.tenant_id)
+    this.tenantServiceService.updateTenant(this.tenants, this.tenant_id)
       .subscribe(data => {
-        console.log(this.tenant_id);
-        //console.log(data);
+        //console.log(this.tenant_id);
+        console.log(data);
        // this.tenants = new Tenants();
       //    this.tenantServiceService.getTenantList().subscribe((data: Tenants[])=>{
-       this.tenants = data;
+       //this.tenants = data;
       // console.log(this.tenants);
         this.gotoList();
       }, error => console.log(error));

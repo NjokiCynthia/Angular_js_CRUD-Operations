@@ -7,6 +7,53 @@
 @import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
 @import '../node_modules/@syncfusion/ej2-lists/styles/material.css';
 @import '../node_modules/@syncfusion/ej2-angular-dropdowns/styles/material.css';
-.selector {
-    background-image: url("../../../assets/property.jpg");
+.my_image {
+    background-image: url("/assets/property.jpg");
+    background-size: cover;
+} 
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 70px;
+    width: 100%;
+    background: #000;
+    color: #fff;
+    box-shadow: 0 0 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+#navbar > * {
+    flex: 1;
+}
+.logo {
+    font-size: 24px;
+    font-weight: 600;
+}
+.menu {
+    display: flex;
+    justify-content: flex-end;
+}
+.menu a {
+    color: #fff;
+    margin: 0 7px;
+    text-transform: uppercase;
+}
+.menu a:hover {
+    color: orange;
+}
+.menu a.active {
+    color: orange;
+}
+#content {
+    margin-top: 80px;
+    padding: 50px 100px;
 }

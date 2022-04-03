@@ -14,13 +14,13 @@ export class TenantServiceService {
   createTenant(tenants: any): Observable<any> {
     return this.http.post(`${this.tenantsUrl}/add`, tenants);
   }
-  updateTenant(value: any, tenant_id: any): Observable<any> {
-    return this.http.put(`${this.tenantsUrl}/update`, value);
-  }
+  // updateTenant(value: any, tenant_id: any): Observable<any> {
+  //   return this.http.put(`${this.tenantsUrl}/update`, value);
+  // }
  
-//  updateTenant(value: any, tenant_id: BigInt): Observable<any> {
-//     return this.http.put(`${this.tenantsUrl}/update/${tenant_id}`, value);
-//   }
+ updateTenant(value: any, tenant_id: BigInt): Observable<any> {
+    return this.http.put(`${this.tenantsUrl}/update/${tenant_id}`, value);
+  }
 //   updateData(data: any, id: string): Observable<any> {tenant_id: BigInt,
 //     return this.http.patch(`${this.baseURL}/update/${id}`, data)
 // }
