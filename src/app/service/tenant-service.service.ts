@@ -17,7 +17,7 @@ export class TenantServiceService {
     return this.http.post(`${this.tenantsUrl}/add`, tenants);
   }
  
- updateTenant( value: any): Observable<any> {
+ updateTenant(value: any, tenant_id: any): Observable<any> {
     return this.http.put(`${this.tenantsUrl}/update`, value);
   }
 //   updateData(data: any, id: string): Observable<any> {tenant_id: BigInt,
