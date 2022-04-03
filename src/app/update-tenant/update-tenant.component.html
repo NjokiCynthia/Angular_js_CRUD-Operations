@@ -1,43 +1,45 @@
 <h3>Modify the Tenant</h3>
 <div [hidden]="onSubmit" style="width: 400px;">
-  <form (ngSubmit)="onSubmit()">  </form>
-</div> 
-    <div class="form-group">
-      <label for="name">First Name</label>
-      <input type="text" class="form-control" id="firstName" required [(ngModel)]="tenants.tenant_fname" name="firstName">
-    </div>
+  <!--<form (ngSubmit)="onSubmit()">  </form>-->
+</div>
+<form #updateForm="ngModel" (ngSubmit)="onSubmit(updateForm.value)">
+  <div class="form-group">
+    <label for="name">First Name</label>
+    <input type="text" class="form-control" id="firstName" required [(ngModel)]="tenants.tenant_fname" name="tenant_fname">
+  </div>
 
-    <div class="form-group">
-      <label for="name">Last Name</label>
-      <input type="text" class="form-control" id="lastName" required [(ngModel)]="tenants.tenant_lname" name="lastName">
-    </div>
+  <div class="form-group">
+    <label for="name">Last Name</label>
+    <input type="text" class="form-control" id="lastName" required [(ngModel)]="tenants.tenant_lname" name="tenant_lname">
+  </div>
 
+  
+  <div class="form-group">
+    <label for="name">tenant address</label>
+    <input type="text" class="form-control" id="tenant_address" required [(ngModel)]="tenants.address" name="address">
+  </div>
+  <div class="form-group">
+    <label for="name">tenant email</label>
+    <input type="text" class="form-control" id="tenant_email" required [(ngModel)]="tenants.email" name="email">
+  </div>
+  <div class="form-group">
+    <label for="name">tenant Id number</label>
+    <input type="text" class="form-control" id="tenant_id_no" required [(ngModel)]="tenants.id_no" name="id_no">
+  </div>
+  
+  <div class="form-group">
+      <label for="name">tenant county</label>
+      <input type="text" class="form-control" id="tenant_county" required [(ngModel)]="tenants.county" name="county">
+    </div>
     
     <div class="form-group">
-      <label for="name">tenant address</label>
-      <input type="text" class="form-control" id="tenant_address" required [(ngModel)]="tenants.address" name="tenant_address">
+      <label for="name">tenant gender</label>
+      <input type="text" class="form-control" id="tenant_gender" required [(ngModel)]="tenants.gender" name="gender">
     </div>
     <div class="form-group">
-      <label for="name">tenant email</label>
-      <input type="text" class="form-control" id="tenant_email" required [(ngModel)]="tenants.email" name="tenant_email">
+      <label for="name">tenant property</label>
+      <input type="text" class="form-control" id="tenant_property" required [(ngModel)]="tenants.property_name" name="property_name">
     </div>
-    <div class="form-group">
-      <label for="name">tenant Id number</label>
-      <input type="text" class="form-control" id="tenant_id_no" required [(ngModel)]="tenants.id_no" name="tenant_id_no">
-    </div>
-    
-   <div class="form-group">
-        <label for="name">tenant county</label>
-        <input type="text" class="form-control" id="tenant_county" required [(ngModel)]="tenants.county" name="tenant_county">
-      </div>
-      
-      <div class="form-group">
-        <label for="name">tenant gender</label>
-        <input type="text" class="form-control" id="tenant_gender" required [(ngModel)]="tenants.gender" name="tenant_gender">
-      </div>
-      <div class="form-group">
-        <label for="name">tenant property</label>
-        <input type="text" class="form-control" id="tenant_property" required [(ngModel)]="tenants.property_name" name="tenant_property">
-      </div>
 
-    <button type="submit" class="btn btn-success">Submit</button>
+  <button type="submit" class="btn btn-success">Submit</button>
+</form>

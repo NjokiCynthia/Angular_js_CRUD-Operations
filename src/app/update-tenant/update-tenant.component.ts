@@ -28,8 +28,8 @@ export class UpdateTenantComponent implements OnInit {
       }, error => console.log(error));
   }
 
-  updateTenant() {
-    this.tenantServiceService.updateTenant(this.tenant_id)
+  updateTenant(tenant: Tenants) {
+    this.tenantServiceService.updateTenant(tenant, this.tenant_id)
       .subscribe(data => {
         console.log(data);
        // this.tenants = new Tenants();
@@ -39,8 +39,8 @@ export class UpdateTenantComponent implements OnInit {
         this.gotoList();
       }, error => console.log(error));
   }
-  onSubmit() {
-    this.updateTenant();    
+  onSubmit(tenant: Tenants) {
+    this.updateTenant(tenant);    
   }
 
   gotoList() {
