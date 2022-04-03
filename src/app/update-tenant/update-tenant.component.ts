@@ -24,7 +24,7 @@ export class UpdateTenantComponent implements OnInit {
     this.tenantServiceService.getTenant(this.tenant_id)
     .subscribe(data => {
      console.log(this.tenant_id)
-     this.tenant_id = data;
+     this.tenants = data;
       }, error => console.log(error));
   }
 
