@@ -1,4 +1,4 @@
-<div id="content">  
+<div id="content" class="my_image">  
   <h2>Create Tenants</h2>
   <div [hidden]="submitted" style="width: 400px;">
     <form (ngSubmit)="onSubmit()">
@@ -76,10 +76,7 @@
             <!-- <input type="text" class="form-control" id="tenant_desc" required [(ngModel)]="tenants.county_id" name="tenant_county"> -->
           </div>
         </div>
-      </div>
-
-        
-        
+      </div> 
           
       <input type="hidden" ng-model="tenants.tenant_id" />
 
@@ -89,6 +86,5 @@
 
   <div [hidden]="!submitted">
     <h4>You submitted successfully!</h4>
-    <button class="btn btn-success" (click)="newTenant()">Add Another Tenant.</button> 
   </div>
 </div>

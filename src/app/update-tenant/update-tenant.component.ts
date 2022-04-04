@@ -12,12 +12,14 @@ export class UpdateTenantComponent implements OnInit {
 
   tenant_id: BigInt;
   tenants: Tenants;
+  updated = false;
 
   constructor(private route: ActivatedRoute,private router: Router,
     private tenantServiceService: TenantServiceService) { }
 
   ngOnInit(): void {
     this.tenants = new Tenants();
+    this.updated = false;
 
     this.tenant_id = this.route.snapshot.params['tenant_id'];
     

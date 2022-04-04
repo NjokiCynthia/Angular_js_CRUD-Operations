@@ -37,7 +37,6 @@ export class TenantListComponent implements OnInit {
             this.tenants = this.tenants.filter(item => item.tenant_id !== tenant_id));
             console.log('Tenant deleted successfully!');
        }
-     
       }
    
 

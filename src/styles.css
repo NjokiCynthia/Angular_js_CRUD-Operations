@@ -10,6 +10,18 @@
 .my_image {
     background-image: url("/assets/property.jpg");
     background-size: cover;
+   /* // backdrop-filter: blur(100px); */
+   /* Add the blur effect */
+  /* filter: blur(10px); */
+  /* -webkit-filter: blur(10px); */
+
+  /* Full height */
+  /* height: 100%; */
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 } 
 
 body {
